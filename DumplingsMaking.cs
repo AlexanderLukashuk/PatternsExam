@@ -4,13 +4,23 @@ namespace PatternsExam
 {
     public abstract class DumplingsMaking
     {
+        public void Make()
+        {
+            GetName();
+            AddMeat();
+            AddDought();
+            AddSalt();
+            AddSpices();
+            GetReadyDumplings();
+        }
+
         public abstract string Name { get; }
         public abstract void GetName();
         public abstract void AddMeat();
         public abstract void AddDought();
         public abstract void AddSalt();
         public abstract void AddSpices();
-        public virtual void GetDumplings()
+        public virtual void GetReadyDumplings()
         {
             Console.WriteLine("Получили готовые пельмени");
         }
