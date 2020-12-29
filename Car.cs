@@ -69,9 +69,9 @@ namespace PatternsExam
         }
     }
 
-    public class PassengersCar : Car
+    public class Passengers : Car
     {
-        public PassengersCar()
+        public Passengers()
         {
             this.CarType = "Легковая";
         }
@@ -85,7 +85,7 @@ namespace PatternsExam
         }
     }
 
-    public class Minivan : PassengersCar
+    public class Minivan : Passengers
     {
         public override void Drive()
         {
@@ -93,7 +93,7 @@ namespace PatternsExam
         }
     }
 
-    public class Jeep : PassengersCar
+    public class Jeep : Passengers
     {
         public override void Drive()
         {
@@ -101,7 +101,7 @@ namespace PatternsExam
         }
     }
 
-    public class Sedan : PassengersCar
+    public class Sedan : Passengers
     {
         public override void Drive()
         {
