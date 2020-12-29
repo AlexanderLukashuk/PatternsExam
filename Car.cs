@@ -77,11 +77,11 @@ namespace PatternsExam
         }
     }
 
-    public class Trucks : Car
+    public class Truck : Car
     {
-        public Trucks()
+        public override void Drive()
         {
-            this.CarType = "Грузовая";
+            Console.WriteLine("Грузовик едет");
         }
     }
 
@@ -109,7 +109,7 @@ namespace PatternsExam
         }
     }
 
-    public class Bus : Trucks
+    public class Bus : Car
     {
         public override void Drive()
         {
