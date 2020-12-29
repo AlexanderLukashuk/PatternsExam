@@ -42,6 +42,7 @@ namespace PatternsExam
         protected string CarBrand { get; set; }
         protected int Price { get; set; }
         protected string Color { get; set; }
+        protected string CarType { get; set; }
         public virtual void Drive()
         {
             Console.WriteLine("Машина едет");
@@ -65,6 +66,54 @@ namespace PatternsExam
         public string GetColor()
         {
             return Color;
+        }
+    }
+
+    public class PassengersCar : Car
+    {
+        public PassengersCar()
+        {
+            this.CarType = "Легковая";
+        }
+    }
+
+    public class Trucks : Car
+    {
+        public Trucks()
+        {
+            this.CarType = "Грузовая";
+        }
+    }
+
+    public class Minivan : PassengersCar
+    {
+        public override void Drive()
+        {
+            Console.WriteLine("Минивэн едет");
+        }
+    }
+
+    public class Jeep : PassengersCar
+    {
+        public override void Drive()
+        {
+            Console.WriteLine("Джип едет");
+        }
+    }
+
+    public class Sedan : PassengersCar
+    {
+        public override void Drive()
+        {
+            Console.WriteLine("Седан едет");
+        }
+    }
+
+    public class Bus : Trucks
+    {
+        public override void Drive()
+        {
+            Console.WriteLine("Автобус едет");
         }
     }
 }
