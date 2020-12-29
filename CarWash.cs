@@ -24,15 +24,15 @@ namespace PatternsExam
         }
     }
 
-    public class TrucksCarBox : CarWash, IBoxCount
+    public class JeepCarBox : CarWash, IBoxCount
     {
-        public static int TrucksCarBoxCount = 0;
+        public static int JeepCarBoxCount = 0;
 
         public void CheckBox()
         {
-            if (TrucksCarBoxCount <= 4 && TrucksCarBoxCount >= 0)
+            if (JeepCarBoxCount <= 4 && JeepCarBoxCount >= 0)
             {
-                TrucksCarBoxCount++;
+                JeepCarBoxCount++;
             }
         }
     }
@@ -41,7 +41,7 @@ namespace PatternsExam
     {
     }
 
-    public class TrucksCar : TrucksCarBox
+    public class JeepCar : JeepCarBox
     {
 
     }
