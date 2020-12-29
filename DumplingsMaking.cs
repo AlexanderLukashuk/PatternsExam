@@ -14,7 +14,16 @@ namespace PatternsExam
             GetReadyDumplings();
         }
 
-        public abstract string Name { get; }
+        public abstract string Name { get; set; }
+        public DumplingsMaking()
+        {
+
+        }
+
+        public DumplingsMaking(string name)
+        {
+            Name = name;
+        }
         public abstract void GetName();
         public abstract void AddMeat();
         public abstract void AddDought();
@@ -33,6 +42,10 @@ namespace PatternsExam
             get
             {
                 return "Купеческие пельмени";
+            }
+            set
+            {
+
             }
         }
         public override void GetName()
@@ -65,6 +78,10 @@ namespace PatternsExam
             {
                 return "Баварские пельмени";
             }
+            set
+            {
+                
+            }
         }
         public override void GetName()
         {
@@ -96,6 +113,10 @@ namespace PatternsExam
             {
                 return "Студенческие пельмени";
             }
+            set
+            {
+                
+            }
         }
         public override void GetName()
         {
@@ -116,6 +137,15 @@ namespace PatternsExam
         public override void AddSpices()
         {
             Console.WriteLine("Добавялем немного специи");
+        }
+    }
+
+    public abstract class DumplingsDecorator : DumplingsMaking
+    {
+        protected DumplingsMaking dumplings;
+        public DumplingsDecorator(string name, DumplingsMaking _dumplings) : base(name)
+        {
+            dumplings = _dumplings;
         }
     }
 }
